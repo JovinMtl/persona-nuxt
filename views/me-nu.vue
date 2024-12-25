@@ -4,12 +4,14 @@
             <div class="menuContent">
                 <div @click="TurnA" 
                     :class="!opt1 ? 'unclicked':'clicked'">
-                    <router-link to="" class="unline fs tex">
+                    <nuxt-link to="/" class="unline fs tex">Home</nuxt-link>
+                    <!-- <router-link to="" class="unline fs tex">
                         Home
-                    </router-link>
+                    </router-link> -->
                 </div>
                 <div @click="TurnB" :class="!opt2 ? 'unclicked wantClick':'clicked'">
-                    <router-link to="/" class="unline fs tex">Portfolio</router-link>
+                    <nuxt-link to="portfolio" class="unline fs tex">Portfolio</nuxt-link>
+                    <!-- <router-link to="/" class="unline fs tex">Portfolio</router-link> -->
                 </div>
                 <div @click="TurnC" :class="!opt3 ? 'unclicked':'clicked'">
                     <router-link to="/" class="unline fs tex">Interests</router-link>
@@ -50,7 +52,7 @@ export default defineComponent({
             opt3.value = false
             opt4.value = false
             // console.log("Have clicked B")
-            emit('initial', '2')
+            // emit('initial', '2')
         }
         const TurnC = ()=>{
             opt3.value = true
@@ -245,7 +247,7 @@ export default defineComponent({
         font-size: 1.5rem;
     }
     .menuSticky{
-        height: 90px;
+        height: 120px;
         padding-bottom: .6rem;
     }
     .unclicked{
