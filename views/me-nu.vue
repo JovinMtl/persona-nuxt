@@ -10,7 +10,7 @@
                     </router-link> -->
                 
                 <nuxt-link to="portfolio" class="unline" 
-                    :class="!opt2 ? 'unclicked wantClick':'clicked'">
+                    :class="!opt2 ? 'unclicked':'clicked'">
                     <div class="fs tex">
                         Portfolio
                     </div>
@@ -31,7 +31,7 @@
     </div>
 </template>
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 
 const p = defineProps(['active'])
 const opt1 = ref<boolean>(false)
@@ -39,7 +39,8 @@ const opt2 = ref<boolean>(false)
 const opt3 = ref<boolean>(false)
 const opt4 = ref<boolean>(false)
 
-console.log("The menu selected is: ", p)
+console.log("The menu selected is: ", p.active)
+
 const disablingAnime = ()=>{
     // will select that element with 'anime' class and 
     // remove such properties making animation
@@ -49,6 +50,10 @@ const disablingAnime = ()=>{
     console.log("First the animation name is : ", ani_s.getPropertyValue('animation-name'))
     animatedElement.style.animationName = 'Jove'
     console.log("Now the animation name is : ", ani_s.getPropertyValue('animation-name'))
+}
+if(p.active == 2){
+    // disablingAnime()
+    opt2.value = true
 }
 </script>
 
@@ -110,10 +115,12 @@ const disablingAnime = ()=>{
     border-radius: 25px;
     border: 3px solid black;
     margin-left: 1vw;
+    transition-duration: 1000ms;
 }
 .unline{
     text-decoration: none;
     color: white;
+    transition-duration: 2000ms;
 }
 .wantClick{
     animation-name: newThing;
