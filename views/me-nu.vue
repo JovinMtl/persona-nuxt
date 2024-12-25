@@ -33,11 +33,13 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
+const p = defineProps(['active'])
 const opt1 = ref<boolean>(false)
 const opt2 = ref<boolean>(false)
 const opt3 = ref<boolean>(false)
 const opt4 = ref<boolean>(false)
 
+console.log("The menu selected is: ", p)
 const disablingAnime = ()=>{
     // will select that element with 'anime' class and 
     // remove such properties making animation

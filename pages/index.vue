@@ -5,20 +5,6 @@
             justify-content: center; align-items: center;
             margin-bottom: 15px;">{{ title_jove }}</div>
         <me-nu></me-nu>
-        <div v-if="choiceMenu==1" style="
-            position: relative;
-            text-align: center;
-            margin: 20px;
-            width: 100vw;">
-            <summ-ary></summ-ary>
-        </div>
-        <div v-if="choiceMenu==2" style="
-            position: relative;
-            text-align: center;
-            margin: 20px;
-            width: 100vw;">
-            <port-folio></port-folio>
-        </div>
         
         <!-- <br>THis is my Hello world, Thierry Nsanzumukiza -->
     </div>
