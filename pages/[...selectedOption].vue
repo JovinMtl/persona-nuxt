@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div style="background-color: red;
-            width: 100%;height: 50px;display: flex;
-            justify-content: center;
-            margin-bottom: 10px;">This is the title</div>
+        <div style="width: 100%;height: 30px"></div>
+        <div style="width: 100%;height: 40px;display: flex;
+            justify-content: center; align-items: center;
+            margin-bottom: 15px;">{{ title_jove }}</div>
         <me-nu></me-nu>
         <div v-if="choiceMenu==1" style="
             position: relative;
