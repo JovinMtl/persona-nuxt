@@ -26,8 +26,6 @@
 </template>
 <script setup lang="ts">
 import meNu from '~/views/me-nu.vue';
-import summAry from '~/views/summ-ary.vue';
-import portFolio from '~/views/port-folio.vue';
 
 const title_jove = "Welcome to the official website of Thierry"
 </script>

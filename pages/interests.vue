@@ -10,14 +10,12 @@
             text-align: center;
             margin: 20px;
             width: 100vw;">
-            <summ-ary></summ-ary>
         </div>
         <div v-if="choiceMenu==2" style="
             position: relative;
             text-align: center;
             margin: 20px;
             width: 100vw;">
-            <port-folio></port-folio>
         </div>
         
         <!-- <br>THis is my Hello world, Thierry Nsanzumukiza -->
@@ -26,8 +24,6 @@
 </template>
 <script setup lang="ts">
 import meNu from '~/views/me-nu.vue';
-import summAry from '~/views/summ-ary.vue';
-import portFolio from '~/views/port-folio.vue';
 
-const title_jove = "You are seeing my achievements"
+const title_jove = "My interests are shared here"
 </script>
