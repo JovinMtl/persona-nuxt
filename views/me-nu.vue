@@ -2,25 +2,30 @@
     <div class="menuSticky">
         <div class="centered menu">
             <div class="menuContent">
-                <div @click="TurnA" 
-                    :class="!opt1 ? 'unclicked':'clicked'">
-                    <nuxt-link to="/" class="unline fs tex">Home</nuxt-link>
+                
+                <nuxt-link to="/" class="unline" :class="!opt1 ? 'unclicked':'clicked'">
+                    <div class=" fs tex">Home</div></nuxt-link>
                     <!-- <router-link to="" class="unline fs tex">
                         Home
                     </router-link> -->
-                </div>
-                <div @click="TurnB" :class="!opt2 ? 'unclicked wantClick':'clicked'">
-                    <nuxt-link to="portfolio" class="unline fs tex">Portfolio</nuxt-link>
-                    <!-- <router-link to="/" class="unline fs tex">Portfolio</router-link> -->
-                </div>
-                <div @click="TurnC" :class="!opt3 ? 'unclicked':'clicked'">
-                    <router-link to="/" class="unline fs tex">Interests</router-link>
-                </div>
-                <div @click="TurnD" :class="!opt4 ? 'unclicked':'clicked'">
-                    <!-- <a href="/home" class="unline fs tex">Contact</a> -->
-                    <router-link to="/" class="unline fs tex">Contact</router-link>
-                    <!-- <a href=""></a> -->
-                </div>
+                
+                <nuxt-link to="portfolio" class="unline" 
+                    :class="!opt2 ? 'unclicked wantClick':'clicked'">
+                    <div class="fs tex">
+                        Portfolio
+                    </div>
+                </nuxt-link>
+                
+                <nuxt-link  to="interests" class="unline" :class="!opt3 ? 'unclicked':'clicked'">
+                    <div class="fs tex">
+                        Interests
+                    </div>
+                </nuxt-link >
+                <nuxt-link  to="/" class="unline" :class="!opt4 ? 'unclicked':'clicked'">
+                    <div class="fs tex">
+                        Contact
+                    </div>
+                </nuxt-link >
             </div>
         </div>
     </div>
@@ -29,7 +34,7 @@
 import { ref,defineComponent, onMounted } from 'vue'
 export default defineComponent({
     setup(props, {emit}) {
-        const opt1 = ref<boolean>(true)
+        const opt1 = ref<boolean>(false)
         const opt2 = ref<boolean>(false)
         const opt3 = ref<boolean>(false)
         const opt4 = ref<boolean>(false)
@@ -38,35 +43,35 @@ export default defineComponent({
         })
         
         const TurnA = ()=>{
-            opt1.value = true
             opt2.value = false
             opt3.value = false
             opt4.value = false
+            opt1.value = true
             // console.log("Have clicked A")
-            emit('initial', '1')
+            // emit('initial', '1')
         }
         const TurnB = ()=>{
             disablingAnime()
-            opt2.value = true
             opt1.value = false
             opt3.value = false
             opt4.value = false
+            opt2.value = true
             // console.log("Have clicked B")
             // emit('initial', '2')
         }
         const TurnC = ()=>{
-            opt3.value = true
             opt2.value = false
             opt1.value = false
             opt4.value = false
-            emit('initial', '3')
+            opt3.value = true
+            // emit('initial', '3')
         }
         const TurnD = ()=>{
-            opt4.value = true
+            opt1.value = false
             opt2.value = false
             opt3.value = false
-            opt1.value = false
-            emit('initial', '4')
+            opt4.value = true
+            // emit('initial', '4')
         }
         const disablingAnime = ()=>{
             // will select that element with 'anime' class and 
