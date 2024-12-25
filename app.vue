@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div style="background-color: green; overflow-x: hidden;
+    margin: -0.5rem;">
     <!-- <NuxtRouteAnnouncer /> -->
     <!-- <NuxtWelcome /> -->
-     muteule
+     <!-- muteule -->
       <NuxtPage/>
   </div>
 </template>
