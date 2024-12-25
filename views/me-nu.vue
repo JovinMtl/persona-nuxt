@@ -30,66 +30,26 @@
         </div>
     </div>
 </template>
-<script lang="ts">
-import { ref,defineComponent, onMounted } from 'vue'
-export default defineComponent({
-    setup(props, {emit}) {
-        const opt1 = ref<boolean>(false)
-        const opt2 = ref<boolean>(false)
-        const opt3 = ref<boolean>(false)
-        const opt4 = ref<boolean>(false)
-        onMounted(()=>{
-            emit('initial', '1')
-        })
-        
-        const TurnA = ()=>{
-            opt2.value = false
-            opt3.value = false
-            opt4.value = false
-            opt1.value = true
-            // console.log("Have clicked A")
-            // emit('initial', '1')
-        }
-        const TurnB = ()=>{
-            disablingAnime()
-            opt1.value = false
-            opt3.value = false
-            opt4.value = false
-            opt2.value = true
-            // console.log("Have clicked B")
-            // emit('initial', '2')
-        }
-        const TurnC = ()=>{
-            opt2.value = false
-            opt1.value = false
-            opt4.value = false
-            opt3.value = true
-            // emit('initial', '3')
-        }
-        const TurnD = ()=>{
-            opt1.value = false
-            opt2.value = false
-            opt3.value = false
-            opt4.value = true
-            // emit('initial', '4')
-        }
-        const disablingAnime = ()=>{
-            // will select that element with 'anime' class and 
-            // remove such properties making animation
-            const animatedElement = document.querySelector('.wantClick')
-            // get its styles properties
-            const ani_s = getComputedStyle(animatedElement)
-            console.log("First the animation name is : ", ani_s.getPropertyValue('animation-name'))
-            animatedElement.style.animationName = 'Jove'
-            console.log("Now the animation name is : ", ani_s.getPropertyValue('animation-name'))
-        }
-        return {
-            opt1, opt2, opt3, opt4,
-            TurnA, TurnB, TurnC, TurnD,
-        }
-    },
-})
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+
+const opt1 = ref<boolean>(false)
+const opt2 = ref<boolean>(false)
+const opt3 = ref<boolean>(false)
+const opt4 = ref<boolean>(false)
+
+const disablingAnime = ()=>{
+    // will select that element with 'anime' class and 
+    // remove such properties making animation
+    const animatedElement = document.querySelector('.wantClick')
+    // get its styles properties
+    const ani_s = getComputedStyle(animatedElement)
+    console.log("First the animation name is : ", ani_s.getPropertyValue('animation-name'))
+    animatedElement.style.animationName = 'Jove'
+    console.log("Now the animation name is : ", ani_s.getPropertyValue('animation-name'))
+}
 </script>
+
 
 <style scoped>
 .centered{
