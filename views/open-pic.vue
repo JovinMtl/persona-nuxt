@@ -19,11 +19,22 @@
     height: auto;
     border-radius: 18px;
 }
+.t-a{
+    text-align: center;
+}
+.im{
+    border-radius:200px;
+    margin-top:-10px; 
+    border: 12px double black;
+}
 
 
 @media screen and (min-width: 850px) {
     .openImage{
         width: 45vw;
+    }
+    .im{
+        border-radius: 500px;
     }
 }
 </style>
