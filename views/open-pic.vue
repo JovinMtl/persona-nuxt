@@ -9,3 +9,21 @@
         </blockquote>            
     </div>
 </template>
+
+<style>
+.openImage{
+    text-align: center;
+    display: inline-block;
+    text-align: center;
+    width: 90vw;
+    height: auto;
+    border-radius: 18px;
+}
+
+
+@media screen and (min-width: 850px) {
+    .openImage{
+        width: 45vw;
+    }
+}
+</style>
