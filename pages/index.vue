@@ -5,6 +5,21 @@
             justify-content: center; align-items: center;
             margin-bottom: 15px;">{{ title_jove }}</div>
         <me-nu></me-nu>
+
+        <div>
+          <div id="e" class="menuContainer" style="display: flex;justify-content: center;">
+            <show-pic></show-pic>
+          </div>
+          <div class="centered">
+              <open-pic></open-pic>
+          </div>
+          <div class="centered">
+              <summ-ary></summ-ary>
+          </div>
+          <div class="centered">
+              <my-offer></my-offer>
+          </div> 
+        </div>  
         
         <!-- <br>THis is my Hello world, Thierry Nsanzumukiza -->
     </div>
