@@ -27,6 +27,43 @@
     margin-top:-10px; 
     border: 12px double black;
 }
+.quote {
+    font-size: 20px;
+    font-style: italic;
+    border-left: 4px solid salmon ;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px 0;
+}
+.c{
+    color: #333;
+}
+.bq-1{
+    font-size: 72px;
+}
+.v-a{
+    vertical-align: middle;
+}
+.m-50{
+    margin-top: -50px;
+}
+.l-h{
+    line-height: 0;
+}
+.d-i{
+    display: inline;
+    font-family: rubik;
+}
+.bq-2{
+    font-size: 42px;
+}
+.author{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+    margin-top: 10px;
+}
 
 
 @media screen and (min-width: 850px) {
