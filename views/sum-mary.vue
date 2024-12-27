@@ -129,4 +129,99 @@ h3{
 .elementTitle1{
     background-color: grey;
 }
+.summary{
+    display: inline-block;
+    font-family: "Open Sans", sans-serif ;
+    text-align: center;
+    width: 90vw;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+.summaryElement{
+    width: 33vw; 
+    display: inline-block; 
+    margin: 20px 20px;
+    background-color: #333;
+    color: wheat;
+    border-radius: 25px; 
+    box-shadow: 0 0 10px grey; 
+    text-align: justify;
+    transition-duration: 500ms;
+}
+.summaryElementActive{
+    width: 53vw; 
+    display: inline-block; 
+    margin: 20px 20px;
+    background-color: white; 
+    border-radius: 25px; 
+    box-shadow: 0 0 20px gray; 
+    text-align: justify;
+    transition-duration: 700ms;
+}
+.summaryElement:hover{
+    box-shadow: 0px 5px 0px #ef4b38, 0 0 8px 2px grey;
+}
+
+
+
+@media screen and (max-width: 600px) {
+.summaryElement{
+    width: 85vw; 
+    height: auto;
+    display: block; 
+    margin: 10px 10px;
+    background-color: white; 
+    color: #333;
+    border-radius: 25px; 
+    box-shadow: 0 0 20px gray; 
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+}
+.summaryElementActive{
+    width: 85vw; 
+    display: block; 
+    margin: 20px 10px;
+    background-color: rgba(128, 128, 128, 0.555); 
+    border-radius: 25px; 
+    box-shadow: 0 0 20px white; 
+    text-align: justify;
+    padding-bottom: 5px;
+}
+}
+@media screen and (min-width: 850px) {
+    .summary{
+        width: 75vw;
+    }
+    .summaryElement{
+        font-size: 1.25rem;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 600px) {
+.summaryElement{
+    width: 85vw; 
+    height: auto;
+    display: block; 
+    margin: 10px 10px;
+    background-color: white; 
+    color: #333;
+    border-radius: 25px; 
+    box-shadow: 0 0 20px gray; 
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+}
+.summaryElementActive{
+    width: 85vw; 
+    display: block; 
+    margin: 20px 10px;
+    background-color: rgba(128, 128, 128, 0.555); 
+    border-radius: 25px; 
+    box-shadow: 0 0 20px white; 
+    text-align: justify;
+    padding-bottom: 5px;
+}
+}
 </style>
