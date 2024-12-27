@@ -14,7 +14,7 @@
               <open-pic></open-pic>
           </div>
           <div class="centered">
-              <summ-ary></summ-ary>
+                <sum-mary></sum-mary>
           </div>
           <div class="centered">
               <my-offer></my-offer>
