@@ -29,6 +29,7 @@
 import meNu from '~/views/me-nu.vue';
 import showPic from '~/views/show-pic.vue';
 import openPic from '~/views/open-pic.vue';
+import sumMary from '~/views/sum-mary.vue';
 
 const title_jove = "Welcome to the official website of Thierry"
 </script>
