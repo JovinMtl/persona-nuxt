@@ -4,8 +4,7 @@
         :class="[content.detail ? 'summaryElementActive':'summaryElement', index==3? 'sBig':'']">
             <div>
                 <h3 :class="[index%3 ? 'elementTitle2':'elementTitle', index==0 ? 'elementTitle1':'']" 
-                    style="font-size: small;" 
-                    @click="titleAlert(content.title)">
+                    style="font-size: small;" >
                     <span v-if="content.title.length < 35">{{ content.title }}</span>
                     <span v-else>
                     {{ (content.title).slice(0,35) }}...</span>
@@ -23,7 +22,6 @@
                 </span>
                 <span v-else>
                     <span v-html="content.content"></span>
-                    <!-- {{ content.content }} -->
                     <span v-show="(content.content).length > 199">
                         <span style="margin-left: .6rem;">&nbsp;</span> 
                         <a style="background-color: transparent; text-align: center;
@@ -39,7 +37,6 @@
 </template>
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
-import { alertController } from '@ionic/vue'
 import { Intro } from '../auxiliaire/types'
 export default defineComponent ({
     setup() {
@@ -47,15 +44,6 @@ export default defineComponent ({
             //will enable or disable the content to be expanded
             (contents.value[index]).detail = !(contents.value[index]).detail
         }
-        const titleAlert = async (content:string) => {
-            const alert = await alertController.create({
-            header: content,
-            cssClass: 'customAlert', 
-            buttons: ['Ok'],
-            mode: 'ios',
-            });
-            await alert.present();
-        };
 
         const contents:Intro = ref([
             {
@@ -116,7 +104,7 @@ Same my passion for Linux was ignited, leading me to explore the system extensiv
             }
         ])
         return {
-            contents, alertController,
+            contents,
             turnDetail, titleAlert,
         }
     },
@@ -162,6 +150,31 @@ h3{
 .summaryElement:hover{
     box-shadow: 0px 5px 0px #ef4b38, 0 0 8px 2px grey;
 }
+.elementTitle2{
+    height: 30px;
+    margin-top: -5px;
+    background-color: #594c4c; 
+    color: white;
+    border-top-left-radius: 18px; 
+    border-top-right-radius: 18px;
+    text-align: center; 
+    font-size: .9rem;
+    align-items: center; 
+    align-content: center;
+}
+.elementTitle{
+    display: flex;
+    justify-content: center;
+    padding: 0 5px;
+}
+.elementTitle2{
+    display: flex;
+    justify-content: center;
+    padding: 0 5px;
+}
+.elementTitle1{
+    background-color: grey;
+}
 
 
 
@@ -197,6 +210,9 @@ h3{
     .summaryElement{
         font-size: 1.25rem;
         text-align: center;
+    }
+    .sBig{
+        width: 50vw;
     }
 }
 @media screen and (max-width: 600px) {
