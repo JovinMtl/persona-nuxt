@@ -1,5 +1,5 @@
 <template>
-  <div style="overflow-x: hidden;
+  <div style="
     margin: -0.5rem;">
     <!-- <NuxtRouteAnnouncer /> -->
     <!-- <NuxtWelcome /> -->
