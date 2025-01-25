@@ -3,7 +3,7 @@
         <div style="width: 100%;height: 30px"></div>
         <div style="width: 100%;height: 40px;display: flex;
             justify-content: center; align-items: center;
-            margin-bottom: 15px;">{{ title_jove }}</div>
+            margin-bottom: 15px;font-family: 'Satisfy'; font-size: larger;">{{ title_jove }}</div>
         <me-nu></me-nu>
 
         <div>
