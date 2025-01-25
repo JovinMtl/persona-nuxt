@@ -1,6 +1,6 @@
 <template>
   <div style="
-    margin: -0.5rem;">
+    margin: -0.5rem;" class="muteBg">
     <!-- <NuxtRouteAnnouncer /> -->
     <!-- <NuxtWelcome /> -->
      <!-- muteule -->
