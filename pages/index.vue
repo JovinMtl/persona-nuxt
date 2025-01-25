@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div style="width: 100%;height: 30px"></div>
-        <div style="width: 100%;height: 40px;display: flex;
+        <div style="width: 100%;height: 10px"></div>
+        <h2 style="width: 100%;height: 50px;display: flex;
             justify-content: center; align-items: center;
-            margin-bottom: 15px;font-family: 'Satisfy'; font-size: larger;">{{ title_jove }}</div>
+            margin-bottom: 15px;font-family: 'Satisfy';font-weight: 400;">{{ title_jove }}</h2>
         <me-nu></me-nu>
 
         <div>
