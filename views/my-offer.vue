@@ -34,8 +34,8 @@
 </template>
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
-import offerContent from '../operations/offer-content.vue';
-import { MyOffer } from '../auxiliaire/types'
+import offerContent from './sub/offer-content.vue'
+import { MyOffer } from './types'
 export default defineComponent ({
     components:{
         'offer-content':offerContent,
