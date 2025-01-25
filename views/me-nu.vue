@@ -59,6 +59,9 @@ if(p.active == 2){
 
 
 <style scoped>
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .centered{
     text-align: center;
 }
@@ -137,7 +140,7 @@ if(p.active == 2){
 .menuSticky{
     position: sticky;
     top: 0;
-    height: 80px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,8 +208,8 @@ if(p.active == 2){
         width: 12vw; 
         background-color: red;
         align-content: center; 
-        border-radius: 25px;
-        border: 3px solid black;
+        border-radius: 50px;
+        border: 4px solid black;
         margin-left: 1vw;
     }
     .fs{
