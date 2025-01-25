@@ -27,15 +27,15 @@
             <span style="margin-left: .3rem; top: 3rem;">&nbsp;</span>
             <a href="https://www.linkedin.com/in/thierry-nsanzumukiza-9b8bb1109" 
                 target="_blank"  rel="noopener noreferrer" style="color: blue;">
-                <ion-icon :icon="logoLinkedin"></ion-icon>
+                logoLinkedin
             </a>
             <span style="margin-left: .9rem;">&nbsp;</span>
             <a href="mailto:nsanzumukizath@gmail.com" style="color: blue;">
-                <ion-icon :icon="mailOutline"></ion-icon>
+                mailOutline
             </a>
             <span style="margin-left: .9rem;">&nbsp;</span>
             <a href="https://wa.me/+25779071453" style="color: green;">
-                <ion-icon :icon="logoWhatsapp"></ion-icon>
+                logoWhatsapp
             </a>
             
             
@@ -47,13 +47,8 @@
 </template>
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
-import { IonIcon } from '@ionic/vue'
-import { logoWhatsapp, mailOutline, logoLinkedin } from 'ionicons/icons'
 import { Offer } from '../auxiliaire/types'
 export default defineComponent ({
-    components:{
-        IonIcon,
-    },
     props:[
         'option',
     ],
@@ -84,7 +79,6 @@ export default defineComponent ({
         })
         return {
             actualOption, offers,
-            logoWhatsapp, mailOutline, logoLinkedin,
         }
     },
 })
