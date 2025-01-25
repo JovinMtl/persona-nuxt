@@ -9,7 +9,8 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern+Guides&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
 
 .muteBg{
     background-color: #f8f8f88a;
