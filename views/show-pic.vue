@@ -1,6 +1,6 @@
 <template>
     <div class="centered welcomeText bigWidth">
-        <div class="mt-20 fw-b">
+        <div class="mt-20 fw-b" style="font-family: Satisfy;">
             Nsanzumukiza Thierry Jovin
         </div> 
        
