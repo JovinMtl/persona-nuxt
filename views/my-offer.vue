@@ -1,16 +1,14 @@
 <template>
     <div class="offerContainer">
-        <h4 class="offerTitle"> 
+        <h2 class="offerTitle"> 
             Click below to see the exciting collaboration we can build together.
-        </h4>
+        </h2>
         <div class="button-container">
             <div class="button">
                 <router-link @click="TurnA"
                     to="/" style="color: white;">
                     <div class="mtl1 mtl">
                         <div style="font-size: 0.74rem; text-align: center; margin: auto">
-                            <!-- <span style="margin-left: .6rem;">&nbsp;</span> -->
-                            <!-- <span style="text-align: center;">FullStack Developer</span> -->
                             <span>Contract</span>
                         </div> 
                     </div>
@@ -76,11 +74,13 @@ export default defineComponent ({
     text-align: center;
     width: 90vw;
     border-radius: 25px;
+    margin-top: 1rem;
     /* transition-duration: 900ms; */
 }
 .offerTitle{
     --prefered-color: rgb(131, 131, 127);
     font-weight: bold; margin-top: 35px; 
+    font-family: Sen;
     text-shadow: 0 1px var(--prefered-color),
      0 -1px var(--prefered-color), 
      -1px 0 var(--prefered-color), 
@@ -94,6 +94,7 @@ export default defineComponent ({
     height: 40px;
     background-color: red;
     border-radius: 50px;
+    /* margin-top: -1rem; */
 }
 .button{
     font-size: 16px;
